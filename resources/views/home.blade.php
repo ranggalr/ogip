@@ -159,228 +159,115 @@
 
 
 
-<section class="md:overflow-x-scroll bg-ogip-1 h-screen md:pt-0 pt-2">
-    <div class="flex justify-center mt-10">
-        <span class="mb-8 text-xl font-bold tracking-widest text-gray-200 uppercase bg-ogip-2 py-2 px-4 rounded-3xl">
-            Events </span>
-    </div>
-    <div class="container p-5 py-12 mx-auto md:p-20 max-w-7xl">
-        <div class="flex flex-wrap mx-auto md:flex-nowrap">
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/VOC-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">VOC
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/Petroleum Insight-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Petroleum Insight
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/Social Activity-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Pascal
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/Company visit-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Virtual Company Visit
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/CEO Talk-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">CEO Talk
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/Grand Opening-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Grand Opening
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/Awarding-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Awarding Night
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Pre-event/OGIP Cup-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">OGIP Cup
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-
-
-<section class="md:overflow-x-scroll bg-ogip-2 h-screen">
-    <div class="flex justify-center mt-10">
-        <span class="mb-8 text-xl font-bold tracking-widest text-gray-200 uppercase bg-ogip-3 py-2 px-4 rounded-3xl">
-            Competitions </span>
-    </div>
-    <div class="container p-5 py-12 mx-auto md:p-20 max-w-7xl">
-        <div class="flex flex-wrap mx-auto md:flex-nowrap">
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Smart Competition-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class=""><br />Smart Competition
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/ORD-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Oil Rig Design Competition
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Geothermal-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Geothermal Case Study Competition
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Paper-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Paper Poster Competition
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/POD-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Plan Of Development Competition
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex w-full">
-                    <div
-                        class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:hover:-translate-x-16 md:hover:-translate-y-8">
-                        <img class="object-cover object-center w-full rounded-t-xl lg:h-80 md:h-36"
-                            src="{{ asset('img/logo lomba/Simulasi reservoir-01.png') }}" alt="blog">
-                        <div class="px-6 py-2">
-                            <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                                <span class="">Reservoir Simulation Competition
-                                </span></h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
 
 
 <section>
+    <div class="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+      <div class="relative mx-auto max-w-7xl">
+        <div class="grid max-w-lg gap-5 mx-auto lg:grid-cols-3 lg:max-w-none">
+          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48" src="https://d33wubrfki0l68.cloudfront.net/d75073109edbac6e4c4e3e3e15cdee9f18b2ffe5/bf256/images/ogtwitter.png" alt="">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+              <div class="flex-1">
+                <a href="#" class="block mt-2">
+                  <p class="text-xl font-semibold text-neutral-600"> Boost your conversion rate </p>
+                  <p class="mt-3 text-base text-gray-300"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum. </p>
+                </a>
+              </div>
+              <div class="flex items-center mt-6">
+                <div class="flex-shrink-0">
+                  <a href="https://twitter.com/Mike_Andreuzza">
+                    <span class="sr-only">Michael Andreuzza</span>
+                    <img class="w-10 h-10 rounded-full" src="https://d33wubrfki0l68.cloudfront.net/2f76102fd18a4e095eaed7a836a3f2183a982a4d/91dd4/images/avatar.jpg" alt="">
+                  </a>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-neutral-600">
+                    <a href="https://twitter.com/Mike_Andreuzza" class="hover:underline"> Michaerl Andreuzza</a>
+                  </p>
+                  <div class="flex space-x-1 text-sm text-gray-300">
+                    <time datetime="2020-03-16"> Mar 16, 2020 </time>
+                    <span aria-hidden="true"> · </span>
+                    <span> 6 min read </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48" src="https://wickedpopups.com/images/ogTwitter.png" alt="">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+              <div class="flex-1">
+                <a href="https://twitter.com/g_perales" class="block mt-2">
+                  <p class="text-xl font-semibold text-neutral-600"> How to use search engine optimization to drive sales </p>
+                  <p class="mt-3 text-base text-gray-300"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium. </p>
+                </a>
+              </div>
+              <div class="flex items-center mt-6">
+                <div class="flex-shrink-0">
+                  <a href="https://twitter.com/g_perales">
+                    <span class="sr-only">Gabriel Perales</span>
+                    <img class="w-10 h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1442898475218194432/61p-BNsg_400x400.jpg" alt="">
+                  </a>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-neutral-600">
+                    <a href="#" class="hover:underline"> Gabriel Perales </a>
+                  </p>
+                  <div class="flex space-x-1 text-sm text-gray-300">
+                    <time datetime="2020-03-10"> Mar 10, 2020 </time>
+                    <span aria-hidden="true"> · </span>
+                    <span> 4 min read </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+            <div class="flex-shrink-0">
+              <img class="object-cover w-full h-48" src="https://www.wickedtemplates.com/images/opengraph/openGraphTwitter.png" alt="">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+              <div class="flex-1">
+                <a href="#" class="block mt-2">
+                  <p class="text-xl font-semibold text-neutral-600"> Improve your customer experience </p>
+                  <p class="mt-3 text-base text-gray-300"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic. </p>
+                </a>
+              </div>
+              <div class="flex items-center mt-6">
+                <div class="flex-shrink-0">
+                  <a href="https://twitter.com/wickedlabsHQ">
+                    <span class="sr-only">Wicked Labs</span>
+                    <img class="w-10 h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1426761460357738499/LtQow-mk_400x400.jpg" alt="">
+                  </a>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-neutral-600">
+                    <a href="https://twitter.com/wickedlabsHQ" class="hover:underline"> Wicked Labs </a>
+                  </p>
+                  <div class="flex space-x-1 text-sm text-gray-300">
+                    <time datetime="2020-02-12"> Feb 12, 2020 </time>
+                    <span aria-hidden="true"> · </span>
+                    <span> 11 min read </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+{{-- <section>
     <div class="container px-5 py-24 mx-auto lg:px-16">
         <div class="flex flex-col w-full mb-8 text-center">
             <span class="mb-4 text-sm font-medium tracking-wide text-gray-500 uppercase">Our sponsors
@@ -416,7 +303,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 

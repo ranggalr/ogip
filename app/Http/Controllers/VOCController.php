@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\VOCStoreRequest;
+use App\Mail\VOCRegistered;
 use App\Models\VOC;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class VOCController extends Controller
 {
@@ -38,6 +40,7 @@ class VOCController extends Controller
     {
         try {
             $voc = VOC::create($request->validated());
+            Mail::to($request->email)->send(new VOCRegistered($voc));
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
