@@ -47,7 +47,10 @@ class VOCController extends Controller
                 'msg' => $e->getMessage()
             ]);
         }
-        return $voc;
+        return response()->json([
+            'status' => 'success',
+            'data' => $voc
+        ]);
     }
 
     /**

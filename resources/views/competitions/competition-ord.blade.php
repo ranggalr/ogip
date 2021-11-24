@@ -69,7 +69,7 @@
           <p class="mb-8 text-base leading-relaxed text-left text-gray-300"> TECHNOLOGY AND ECONOMIC INNOVATIONS FOR OFFSHORE DRILLING PROBLEMS IN THE NEW ERA OF WORLD ENERGY CHALLENGES </p>
           <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
             <div class="mt-3 rounded-lg sm:mt-0">
-              <a class="
+              <a href="{{ route('competition.oil-rig-design.registration') }}" class="
             items-center
             block
             px-10

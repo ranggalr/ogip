@@ -29,4 +29,32 @@ Thank you for registering for our event, please check the upload rules down belo
     <li>Don’t forget to submit your video via this link : <a href="http://bit.ly/UPLOADVOC">http://bit.ly/UPLOADVOC</a>
     </li>
     <li>Fail to obey the rules may receive reduction of points or disqualification.</li>
+</ol> <br>
+<span>Subtopic</span>
+<ol>
+    <li>Petroleum Industry</li>
+    <li>OGIP Branding</li>
+</ol> <br>
+<span>Keydates</span>
+<ol>
+    <li>Open Registration : November 22nd, 2021</li>
+    <li>Close Registration : December 2nd, 2021</li>
+    <li>Upload Video : December 4th, 2021</li>
+    <li>Last Day Uploading Video : December 16th, 2021</li>
+    <li>Winner Announcement : December 19th, 2021</li>
+</ol>
+<span>Contact Person</span>
+<ol>
+    <li>Nadia Intan Maharani
+        <ul>
+            <li>WA : 087839416556</li>
+            <li>Email : nadiaaintan48@gmail.com </li>
+        </ul>
+    </li>
+    <li>Ahsha Nuha Rasyidah
+        <ul>
+            <li>WA : 081299436682</li>
+            <li>Email : asarsydh@gmail.com </li>
+        </ul>
+    </li>
 </ol>

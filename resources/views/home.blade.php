@@ -1,4 +1,4 @@
-@extends('layouts.ogip', ['footerColor' => 'bg-white', 'footerTextColor' => 'text-gray-900'])
+@extends('layouts.ogip', ['footerColor' => 'bg-white', 'footerTextColor' => 'text-gray-700'])
 
 @section('body')
 
@@ -31,7 +31,7 @@
                     </p>
                     <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                         <div class="mt-3 rounded-lg sm:mt-0">
-                            <button class="
+                            <a href="#events" class="
               items-center
               block
               px-5
@@ -51,7 +51,7 @@
               focus:ring-2
               focus:ring-offset-2
               focus:ring-blue-500
-            "> See more </button>
+            "> See more </a>
                         </div>
                     </div>
                 </div>
@@ -160,103 +160,256 @@
 
 
 
+<section class="bg-ogip-1" id="events">
+    <div class="relative items-center w-full px-5 py-12 mx-auto  md:px-12 lg:px-24 max-w-7xl">
+        <div class="pb-5 border-b border-white">
+            <h3 class="text-lg font-medium leading-6 text-gray-200"> Our events </h3>
+        </div>
+        <div class="grid w-full grid-cols-1 gap-6 mx-auto mt-12 lg:grid-cols-3">
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/VOC-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    Video Of OGIP </h1>
+                <div class="mt-4">
+                    <a href="{{ route('event.voc') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/Petroleum Insight-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    Petroleum Insight </h1>
+                <div class="mt-4">
+                    <a href="{{ route('event.petroleum-insight') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/CEO Talk-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    CEO Talk </h1>
+                <div class="mt-4">
+                    <a href="{{ route('event.ceo-talk') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/Social Activity-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    Petroleum Act for Social </h1>
+                <div class="mt-4">
+                    <a href="{{ route('event.pascal') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/Company visit-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    Virtual Company Visit </h1>
+                <div class="mt-4">
+                    <a href="{{ route('event.vcc') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/Grand Opening-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    Grand Opening </h1>
+                <div class="mt-4">
+                    <a href="#"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/Awarding-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    Awarding Night </h1>
+                <div class="mt-4">
+                    <a href="#"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Pre-event/OGIP Cup-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Events </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    OGIP Cup </h1>
+                <div class="mt-4">
+                    <a href="#"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="bg-ogip-1">
+    <div class="relative items-center w-full px-5 py-12 mx-auto  md:px-12 lg:px-24 max-w-7xl">
+        <div class="pb-5 border-b border-white">
+            <h3 class="text-lg font-medium leading-6 text-gray-200"> Our competitions </h3>
+        </div>
+        <div class="grid w-full grid-cols-1 gap-6 mx-auto mt-12 lg:grid-cols-3">
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Smart Competition-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Competitions </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    International Smart Competition </h1>
+                <div class="mt-4">
+                    <a href="{{ route('competition.smart-competition') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/ORD-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Competitions </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    International Oil Rig Design Competition </h1>
+                <div class="mt-4">
+                    <a href="{{ route('competition.oil-rig-design') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Geothermal-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Competitions </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    International Geothermal Case Study Competition </h1>
+                <div class="mt-4">
+                    <a href="{{ route('competition.geothermal') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Paper-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Competitions </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    International Paper and Poster Competition </h1>
+                <div class="mt-4">
+                    <a href="#"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/POD-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Competitions </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    International Plan of Development </h1>
+                <div class="mt-4">
+                    <a href="{{ route('competition.plan-of-development') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6 bg-ogip-2 rounded-xl">
+                <img class="object-contain object-center w-full mb-8  lg:h-48 md:h-36 rounded-xl"
+                    src="{{ asset('img/logo lomba/Simulasi reservoir-01.png') }}" alt="blog">
+                <h2 class="mb-8 text-xs font-semibold tracking-widest text-ogip-5 uppercase "> Competitions </h2>
+                <h1
+                    class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
+                    International Reservoir Simulation Competition </h1>
+                <div class="mt-4">
+                    <a href="{{ route('competition.reservoir-simulation') }}"
+                        class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
+                        title="read more"> Read More » </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
 
 <section>
-    <div class="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
-      <div class="relative mx-auto max-w-7xl">
-        <div class="grid max-w-lg gap-5 mx-auto lg:grid-cols-3 lg:max-w-none">
-          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-            <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48" src="https://d33wubrfki0l68.cloudfront.net/d75073109edbac6e4c4e3e3e15cdee9f18b2ffe5/bf256/images/ogtwitter.png" alt="">
-            </div>
-            <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-              <div class="flex-1">
-                <a href="#" class="block mt-2">
-                  <p class="text-xl font-semibold text-neutral-600"> Boost your conversion rate </p>
-                  <p class="mt-3 text-base text-gray-300"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum. </p>
-                </a>
-              </div>
-              <div class="flex items-center mt-6">
-                <div class="flex-shrink-0">
-                  <a href="https://twitter.com/Mike_Andreuzza">
-                    <span class="sr-only">Michael Andreuzza</span>
-                    <img class="w-10 h-10 rounded-full" src="https://d33wubrfki0l68.cloudfront.net/2f76102fd18a4e095eaed7a836a3f2183a982a4d/91dd4/images/avatar.jpg" alt="">
-                  </a>
-                </div>
-                <div class="ml-3">
-                  <p class="text-sm font-medium text-neutral-600">
-                    <a href="https://twitter.com/Mike_Andreuzza" class="hover:underline"> Michaerl Andreuzza</a>
-                  </p>
-                  <div class="flex space-x-1 text-sm text-gray-300">
-                    <time datetime="2020-03-16"> Mar 16, 2020 </time>
-                    <span aria-hidden="true"> · </span>
-                    <span> 6 min read </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="container px-5 py-24 mx-auto lg:px-16">
+      <div class="flex flex-col w-full mb-8 text-center">
+        <span class="mb-4 text-sm font-medium tracking-wide text-gray-500 uppercase"> Organized by </a>
+        </span>
+      </div>
+      <div class="mx-auto text-center">
+        <div class="grid grid-cols-4 gap-4 mx-auto lg:grid-cols-4">
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/HMTM UPNVY.png') }}" alt="HMTM">
           </div>
-          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-            <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48" src="https://wickedpopups.com/images/ogTwitter.png" alt="">
-            </div>
-            <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-              <div class="flex-1">
-                <a href="https://twitter.com/g_perales" class="block mt-2">
-                  <p class="text-xl font-semibold text-neutral-600"> How to use search engine optimization to drive sales </p>
-                  <p class="mt-3 text-base text-gray-300"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium. </p>
-                </a>
-              </div>
-              <div class="flex items-center mt-6">
-                <div class="flex-shrink-0">
-                  <a href="https://twitter.com/g_perales">
-                    <span class="sr-only">Gabriel Perales</span>
-                    <img class="w-10 h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1442898475218194432/61p-BNsg_400x400.jpg" alt="">
-                  </a>
-                </div>
-                <div class="ml-3">
-                  <p class="text-sm font-medium text-neutral-600">
-                    <a href="#" class="hover:underline"> Gabriel Perales </a>
-                  </p>
-                  <div class="flex space-x-1 text-sm text-gray-300">
-                    <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                    <span aria-hidden="true"> · </span>
-                    <span> 4 min read </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/IATMI UPNVY.png') }}" alt="IATMI">
           </div>
-          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-            <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48" src="https://www.wickedtemplates.com/images/opengraph/openGraphTwitter.png" alt="">
-            </div>
-            <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-              <div class="flex-1">
-                <a href="#" class="block mt-2">
-                  <p class="text-xl font-semibold text-neutral-600"> Improve your customer experience </p>
-                  <p class="mt-3 text-base text-gray-300"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic. </p>
-                </a>
-              </div>
-              <div class="flex items-center mt-6">
-                <div class="flex-shrink-0">
-                  <a href="https://twitter.com/wickedlabsHQ">
-                    <span class="sr-only">Wicked Labs</span>
-                    <img class="w-10 h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1426761460357738499/LtQow-mk_400x400.jpg" alt="">
-                  </a>
-                </div>
-                <div class="ml-3">
-                  <p class="text-sm font-medium text-neutral-600">
-                    <a href="https://twitter.com/wickedlabsHQ" class="hover:underline"> Wicked Labs </a>
-                  </p>
-                  <div class="flex space-x-1 text-sm text-gray-300">
-                    <time datetime="2020-02-12"> Feb 12, 2020 </time>
-                    <span aria-hidden="true"> · </span>
-                    <span> 11 min read </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/SPE UPNVY SC.png') }}" alt="SPE ">
+          </div>
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/API UPNVY.png') }}" alt="API ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<section>
+    <div class="container px-5 py-24 mx-auto lg:px-16">
+      <div class="flex flex-col w-full mb-8 text-center">
+        <span class="mb-4 text-sm font-medium tracking-wide text-gray-500 uppercase"> Supported by </a>
+        </span>
+      </div>
+      <div class="mx-auto text-center">
+        <div class="grid grid-cols-5 gap-4 mx-auto lg:grid-cols-5">
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/Logo UPN Yogyakarta.png') }}" alt="UPNVY">
+          </div>
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/SPE JAVA 1.png') }}" alt="SPE JAVA">
+          </div>
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/IATMI PUSAT.png') }}" alt="IATMI PUSAT">
+          </div>
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/1200px-Logo_of_SKK_Migas.svg.png') }}" alt="SKK MIGAS">
+          </div>
+          <div>
+            <img class="h-4 mx-auto lg:h-40" src="{{ asset('img/Logo Kementerian Energi dan Sumber Daya Mineral (ESDM) (PNG-1080p) - FileVector69.png') }}" alt="KESDM">
           </div>
         </div>
       </div>
@@ -265,45 +418,44 @@
 
 
 
-
-
-{{-- <section>
-    <div class="container px-5 py-24 mx-auto lg:px-16">
-        <div class="flex flex-col w-full mb-8 text-center">
-            <span class="mb-4 text-sm font-medium tracking-wide text-gray-500 uppercase">Our sponsors
-            </span>
-        </div>
-        <div class="mx-auto text-center">
-            <div class="grid grid-cols-5 gap-4 mx-auto lg:grid-cols-5">
+<section>
+    <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+        <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+            <div class="w-full lg:w-5/6 lg:max-w-lg md:w-1/2 rounded-xl">
                 <div>
-                    <img class="h-4 mx-auto lg:h-12"
-                        src="https://d33wubrfki0l68.cloudfront.net/5a364f2e7cfeadd0f603cdfeda83f5cd0509770d/3f0ae/images/logos/logoone.svg"
-                        alt="Figma">
+                    <img class="object-cover object-center mx-auto rounded-lg" alt="hero"
+                        src="{{ asset('img/contact.png') }}">
                 </div>
-                <div>
-                    <img class="h-4 mx-auto lg:h-12"
-                        src="https://d33wubrfki0l68.cloudfront.net/ab0d1eeefb9cddb55f05f1601b2ae3fbae9317a9/5bfbe/images/logos/logotwo.svg"
-                        alt="Framer">
-                </div>
-                <div>
-                    <img class="h-4 mx-auto lg:h-12"
-                        src="https://d33wubrfki0l68.cloudfront.net/2fea2d550675d7cf3bb77a515487bce6c086051b/951f5/images/logos/logothree.svg"
-                        alt="Sketch ">
-                </div>
-                <div>
-                    <img class="h-4 mx-auto lg:h-12"
-                        src="https://d33wubrfki0l68.cloudfront.net/f9b8da8b1442382848d30275dc2d0337d14a04c9/dc8f4/images/logos/logofour.svg"
-                        alt="Sketch ">
-                </div>
-                <div>
-                    <img class="h-4 mx-auto lg:h-12"
-                        src="https://d33wubrfki0l68.cloudfront.net/07ddf740e29509004147c6a83c09f299366546c9/03a26/images/logos/logofive.svg"
-                        alt="Invision">
-                </div>
+            </div>
+            <div class="
+      flex flex-col
+      items-start
+      mb-16
+      text-left
+      lg:flex-grow
+      md:w-1/2
+      lg:pr-24
+      md:pl-16 md:mb-0
+    ">
+                <span class="mb-8 text-xl font-bold tracking-widest text-ogip-1 uppercase"> Contact us </span>
+                <p class="mb-12 text-base leading-relaxed text-gray-700">
+                    Having any difficulties or there's something to ask? Feel free to reach us on : <br>
+                    TIKTOK : https://www.tiktok.com/@hmtm.ogip <br>
+                    IG : https://www.instagram.com/ogip_2022/ <br>
+                    LinkedIn : https://www.linkedin.com/company/ogip-upn-v-yogyakarta/ <br>
+                    Line@ : https://line.me/ti/p/~@ogip <br>
+                    Email : hmtm.ogip@upnyk.ac.id
+                </p>
             </div>
         </div>
     </div>
-</section> --}}
+</section>
+
+
+
+
+
+
 
 
 

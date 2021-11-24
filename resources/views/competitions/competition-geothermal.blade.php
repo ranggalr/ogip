@@ -69,7 +69,7 @@
           <p class="mb-8 text-base leading-relaxed text-left text-gray-300"> FACING WORLD ENERGY CHALLENGE WITH GEOTHERMAL AS A SOLUTION </p>
           <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
             <div class="mt-3 rounded-lg sm:mt-0">
-              <a class="
+              <a href="{{ route('competition.geothermal.registration') }}" class="
             items-center
             block
             px-10

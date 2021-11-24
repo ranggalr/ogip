@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\GeothermalCompetitionController;
+use App\Http\Controllers\ORDCompetitionController;
+use App\Http\Controllers\PaperPosterController;
+use App\Http\Controllers\PODCompetitionController;
+use App\Http\Controllers\SimresCompetitionController;
+use App\Http\Controllers\SmartCompetitionController;
 use App\Http\Controllers\VOCController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,17 +38,28 @@ Route::prefix('event')->name('event.')->group(function () {
 
 Route::prefix('competition')->name('competition.')->group(function () {
     Route::view('oil-rig-design', 'competitions.competition-ord')->name('oil-rig-design');
+    Route::view('oil-rig-design/registration', 'registration.registration-ord')->name('oil-rig-design.registration');
+    Route::post('oil-rig-design/registration', [ORDCompetitionController::class, 'store'])->name('oil-rig-design.registration');
     Route::view('geothermal-case-study', 'competitions.competition-geothermal')->name('geothermal');
+    Route::view('geothermal-case-study/registration', 'rregistration.egistration-gcs')->name('geothermal.registration');
+    Route::post('geothermal-case-study/registration', [GeothermalCompetitionController::class, 'store'])->name('geothermal.registration');
     Route::view('plan-of-development', 'competitions.competition-pod')->name('plan-of-development');
+    Route::view('plan-of-development/registration', 'registration.registration-pod')->name('plan-of-development.registration');
+    Route::post('plan-of-development/registration', [PODCompetitionController::class, 'store'])->name('plan-of-development.registration');
     Route::view('paper-poster', 'competitions.competition-ppc')->name('paper-poster');
+    Route::view('paper-poster/registration', 'registration.registration-ppc')->name('paper-poster.registration');
+    Route::post('paper-poster/registration', [PaperPosterController::class, 'store'])->name('paper-poster.registration');
     Route::view('smart-competition', 'competitions.competition-smart')->name('smart-competition');
+    Route::view('smart-competition/registration', 'registration.registration-smart')->name('smart-competition.registration');
+    Route::post('smart-competition/registration', [SmartCompetitionController::class, 'store'])->name('smart-competition.registration');
     Route::view('reservoir-simulation', 'competitions.competition-reservoir')->name('reservoir-simulation');
+    Route::view('reservoir-simulation/registration', 'registration.registration-simres')->name('reservoir-simulation.register');
+    Route::post('reservoir-simulation/registration', [SimresCompetitionController::class, 'store'])->name('reservoir-simulation.register');
 });
-Route::view('/registration', 'registration')->name('registration');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
 
