@@ -239,7 +239,7 @@
                     class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
                     Grand Opening </h1>
                 <div class="mt-4">
-                    <a href="#"
+                    <a href="{{ route('event.grand-opening') }}"
                         class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
                         title="read more"> Read More » </a>
                 </div>
@@ -252,7 +252,7 @@
                     class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
                     Awarding Night </h1>
                 <div class="mt-4">
-                    <a href="#"
+                    <a href="{{ route('event.awarding-night') }}"
                         class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
                         title="read more"> Read More » </a>
                 </div>
@@ -389,7 +389,7 @@
     </div>
   </section>
 <section>
-    <div class="container px-5 py-24 mx-auto lg:px-16">
+    <div class="container px-5 mx-auto lg:px-16">
       <div class="flex flex-col w-full mb-8 text-center">
         <span class="mb-4 text-sm font-medium tracking-wide text-gray-500 uppercase"> Supported by </a>
         </span>
@@ -416,40 +416,6 @@
     </div>
   </section>
 
-
-
-<section>
-    <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
-        <div class="flex flex-wrap items-center mx-auto max-w-7xl">
-            <div class="w-full lg:w-5/6 lg:max-w-lg md:w-1/2 rounded-xl">
-                <div>
-                    <img class="object-cover object-center mx-auto rounded-lg" alt="hero"
-                        src="{{ asset('img/contact.png') }}">
-                </div>
-            </div>
-            <div class="
-      flex flex-col
-      items-start
-      mb-16
-      text-left
-      lg:flex-grow
-      md:w-1/2
-      lg:pr-24
-      md:pl-16 md:mb-0
-    ">
-                <span class="mb-8 text-xl font-bold tracking-widest text-ogip-1 uppercase"> Contact us </span>
-                <p class="mb-12 text-base leading-relaxed text-gray-700">
-                    Having any difficulties or there's something to ask? Feel free to reach us on : <br>
-                    TIKTOK : https://www.tiktok.com/@hmtm.ogip <br>
-                    IG : https://www.instagram.com/ogip_2022/ <br>
-                    LinkedIn : https://www.linkedin.com/company/ogip-upn-v-yogyakarta/ <br>
-                    Line@ : https://line.me/ti/p/~@ogip <br>
-                    Email : hmtm.ogip@upnyk.ac.id
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 

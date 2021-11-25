@@ -144,6 +144,11 @@ window.smart_app = function() {
                 }
                 return true
             }
+            swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Please fill the form correctly!'
+            })
             return false
         }
     }
@@ -231,6 +236,11 @@ window.ppc_app = function() {
                 }
                 return true
             }
+            swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Please fill the form correctly!'
+            })
             return false
         }
     }
@@ -317,6 +327,11 @@ window.gcs_app = function() {
                 }
                 return true
             }
+            swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Please fill the form correctly!'
+            })
             return false
         }
     }
@@ -404,6 +419,11 @@ window.simres_app = function() {
                 }
                 return true
             }
+            swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Please fill the form correctly!'
+            })
             return false
         }
     }
@@ -507,6 +527,11 @@ window.pod_app = function() {
                 }
                 return true
             }
+            swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Please fill the form correctly!'
+            })
             return false
         }
     }
@@ -609,6 +634,11 @@ window.ord_app = function() {
                 }
                 return true
             }
+            swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Please fill the form correctly!'
+            })
             return false
         }
     }

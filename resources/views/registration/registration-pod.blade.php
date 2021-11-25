@@ -27,13 +27,13 @@
                                 <div class="text-lg font-bold text-gray-700 leading-tight" x-show="currentStep == 2">
                                     Leader information</div>
                                 <div class="text-lg font-bold text-gray-700 leading-tight" x-show="currentStep == 3">
-                                    Member information</div>
+                                    Member 1 information</div>
                                 <div class="text-lg font-bold text-gray-700 leading-tight" x-show="currentStep == 4">
-                                    Member information</div>
+                                    Member 2 information</div>
                                 <div class="text-lg font-bold text-gray-700 leading-tight" x-show="currentStep == 5">
-                                    Member information</div>
+                                    Member 3 information</div>
                                 <div class="text-lg font-bold text-gray-700 leading-tight" x-show="currentStep == 6">
-                                    Member information</div>
+                                    Member 4 information</div>
                                 <div class="text-lg font-bold text-gray-700 leading-tight" x-show="currentStep == 7">
                                     Validating</div>
                             </div>

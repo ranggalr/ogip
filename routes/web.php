@@ -27,6 +27,8 @@ Route::get('/', function () {
 
 Route::prefix('event')->name('event.')->group(function () {
     Route::view('/ceo-talk', 'events.event-ceo')->name('ceo-talk');
+    Route::view('/awarding-night', 'events.event-awarding')->name('awarding-night');
+    Route::view('/grand-opening', 'events.event-opening')->name('grand-opening');
     Route::view('/virtual-company-visit', 'events.event-vcc')->name('vcc');
     Route::view('/pascal', 'events.event-pascal')->name('pascal');
     Route::view('/ogip-cup', 'events.event-ogip_cup')->name('ogip-cup');
