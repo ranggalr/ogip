@@ -1,3 +1,5 @@
+const { default: axios } = require("axios")
+
 window.voc_app = function() {
     return {
         state: {
@@ -638,5 +640,64 @@ window.ord_app = function() {
             })
             return false
         }
+    }
+}
+
+window.payment_app = function() {
+    return {
+        loadingState: false,
+        state: {
+            teamName: null,
+            competition: 'ord',
+            paymentProof: null,
+        },
+        submitForm()
+        {
+            console.log(this.state)
+            if(!Object.values(this.state).includes(null))
+            {
+                let formData = new FormData()
+                formData.append('teamName', this.state.teamName)
+                formData.append('competition', this.state.competition)
+                formData.append('paymentProof', this.state.paymentProof)
+                axios.post(route('payment.store'), formData)
+                .then(resp => {
+                    if(resp.data.status != 'error')
+                    {
+                        swal.fire({
+                            icon: 'success',
+                            title: 'HOORAY!',
+                            text: 'Your payment proof has been submitted, thank you!'
+                        })
+                    }
+                    else
+                    {
+                        swal.fire({
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: resp.data.msg
+                        })
+                    }
+                })
+                .catch(e => {
+                    swal.fire({
+                        icon: 'error',
+                        title: 'Error!',
+                        html: Object.values(e.response.data.errors).map(e => {return '<li>' + e + '</li>'}).join('')
+                    })
+                })
+            }
+            else
+            {
+                swal.fire({
+                    title: 'Oops!',
+                    icon: 'error',
+                    text: 'Please fill the form correctly'
+                })
+            }
+        },
+        handlePaymentProof() {
+            this.state.paymentProof = this.$refs.payment_proof.files[0];
+        },
     }
 }

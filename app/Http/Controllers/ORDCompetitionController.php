@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ORDStoreRequest;
+use App\Mail\CompetitionRegistered;
 use App\Models\ORDCompetition;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ORDCompetitionController extends Controller
 {
@@ -42,6 +44,7 @@ class ORDCompetitionController extends Controller
                 'gdrive' => $request->gdrive,
                 'members' => $request->members,
             ]);
+            Mail::to($request->members[0]['email'])->send(new CompetitionRegistered);
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',

@@ -10,7 +10,7 @@ class PODCompetition extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['team_name', 'members'];
+    protected $fillable = ['team_name', 'members', 'gdrive'];
     protected $casts = [
         'members' => AsArrayObject::class
     ];

@@ -3,6 +3,7 @@
 use App\Http\Controllers\GeothermalCompetitionController;
 use App\Http\Controllers\ORDCompetitionController;
 use App\Http\Controllers\PaperPosterController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PODCompetitionController;
 use App\Http\Controllers\SimresCompetitionController;
 use App\Http\Controllers\SmartCompetitionController;
@@ -24,6 +25,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::view('/payment', 'payment')->name('payment');
+Route::post('/payment', [PaymentController::class, 'store'])->name('payment.store');
 
 Route::prefix('event')->name('event.')->group(function () {
     Route::view('/ceo-talk', 'events.event-ceo')->name('ceo-talk');

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SCStoreRequest;
+use App\Mail\CompetitionRegistered;
 use App\Models\SmartCompetition;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SmartCompetitionController extends Controller
 {
@@ -42,6 +44,7 @@ class SmartCompetitionController extends Controller
                 'gdrive' => $request->gdrive,
                 'members' => $request->members,
             ]);
+            Mail::to($request->members[0]['email'])->send(new CompetitionRegistered);
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
