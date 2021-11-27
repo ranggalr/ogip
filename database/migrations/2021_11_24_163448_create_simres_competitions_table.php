@@ -17,6 +17,7 @@ class CreateSimresCompetitionsTable extends Migration
             $table->id();
             $table->string('team_name');
             $table->json('members');
+            $table->string('gdrive');
             $table->timestamps();
         });
     }

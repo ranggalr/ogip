@@ -39,6 +39,7 @@ class SmartCompetitionController extends Controller
         try {
             $smartCompetition = SmartCompetition::create([
                 'team_name' => $request->teamName,
+                'gdrive' => $request->gdrive,
                 'members' => $request->members,
             ]);
         } catch (\Exception $e) {

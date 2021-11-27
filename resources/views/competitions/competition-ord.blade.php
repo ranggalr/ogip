@@ -142,7 +142,33 @@
         md:text-7xl
         lg:text-5xl
       "> Details </h1>
-          <p class="mb-8 text-base leading-relaxed text-left text-gray-500">One of prestigious competitions in OGIP 2022 that requires collaboration of engineering principal, petroleum knowledge, and design to improve new innovations and technologies on making an oil rig design</p>
+          <p class="mb-8 text-base leading-relaxed text-left text-gray-500">One of prestigious competitions in OGIP 2022 that requires collaboration of engineering principal, petroleum knowledge, and design to improve new innovations and technologies on making an oil rig design
+            <br><span class=" font-bold">Things to prepare before filling the form :</span><br>
+            1.Screenshot to proof that you have upload a twibbon on your personal instagram feeds and tag @ogip2022 , the caption and twibbon can be downloaded here https://bit.ly/TwibbonOGIP2022  (each team member must upload the twibbon)
+            <br>
+            2. Scanned documents of ID / Passport for each member of your team
+            <br>
+            3. Scanned documents of Student ID for each member of your team
+            <br>
+             
+
+            Please compile these pictures above in one Folder:
+            <br>
+            Format name of Folder : Competition_TeamName
+            <br>
+            Example : Smart Competiton_Aquifer99
+            <br>
+             
+
+            *Upload the Folder to YOUR OWN GOOGLE DRIVE LINK
+            <br>
+             
+            *Make sure that the link is accessible for ogip 2022's committees to see
+            <br>
+            *Copy and Paste the gdrige link on the registration form that you will fill
+            <br>
+            *You will get notification email, if you already success registering in OGIP 2022
+          </p>
         </div>
         <div class="w-full mt-12 lg:w-5/6 lg:max-w-lg rounded-xl xl:mt-0">
           <div>

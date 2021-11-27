@@ -39,6 +39,7 @@ class PODCompetitionController extends Controller
         try {
             $pod = PODCompetition::create([
                 'team_name' => $request->teamName,
+                'gdrive' => $request->gdrive,
                 'members' => $request->members,
             ]);
         } catch (\Exception $e) {

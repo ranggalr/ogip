@@ -29,7 +29,7 @@ class VOCStoreRequest extends FormRequest
             'institution' => ['string','max:255','required'],
             'major' => ['string','max:255','required'],
             'line' => ['string','max:255','required'],
-            'phone' => ['integer','required'],
+            'phone' => ['numeric','required'],
         ];
     }
 }

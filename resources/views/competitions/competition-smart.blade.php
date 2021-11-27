@@ -153,7 +153,7 @@
                 <br>
                  
 
-                🔴Please compile these pictures above in one Folder:
+                Please compile these pictures above in one Folder:
                 <br>
                 Format name of Folder : Competition_TeamName
                 <br>

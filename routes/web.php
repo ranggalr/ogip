@@ -34,7 +34,7 @@ Route::prefix('event')->name('event.')->group(function () {
     Route::view('/ogip-cup', 'events.event-ogip_cup')->name('ogip-cup');
     Route::view('/petroleum-insight', 'events.event-pi')->name('petroleum-insight');
     Route::view('/video-of-ogip', 'events.event-voc')->name('voc');
-    Route::view('/video-of-ogip/registration', 'registration-voc')->name('voc.registration');
+    Route::view('/video-of-ogip/registration', 'registration.registration-voc')->name('voc.registration');
     Route::post('/video-of-ogip/registration', [VOCController::class, 'store'])->name('voc.registration');
 });
 
@@ -43,7 +43,7 @@ Route::prefix('competition')->name('competition.')->group(function () {
     Route::view('oil-rig-design/registration', 'registration.registration-ord')->name('oil-rig-design.registration');
     Route::post('oil-rig-design/registration', [ORDCompetitionController::class, 'store'])->name('oil-rig-design.registration');
     Route::view('geothermal-case-study', 'competitions.competition-geothermal')->name('geothermal');
-    Route::view('geothermal-case-study/registration', 'rregistration.egistration-gcs')->name('geothermal.registration');
+    Route::view('geothermal-case-study/registration', 'registration.registration-gcs')->name('geothermal.registration');
     Route::post('geothermal-case-study/registration', [GeothermalCompetitionController::class, 'store'])->name('geothermal.registration');
     Route::view('plan-of-development', 'competitions.competition-pod')->name('plan-of-development');
     Route::view('plan-of-development/registration', 'registration.registration-pod')->name('plan-of-development.registration');

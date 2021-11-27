@@ -1,4 +1,4 @@
-@extends('layouts.ogip-form', ['title' => 'Smart Competition Registration'])
+@extends('layouts.ogip-form', ['title' => 'International Oil Rig Design Competition Registration'])
 
 @section('body')
 <div x-data="ord_app()">
@@ -58,6 +58,15 @@
                                                 placeholder="Your team name" x-model="state.teamName"
                                                 class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                                         </div>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-neutral-600"> Google Drive Link </label>
+                                        <div class="mt-1">
+                                            <input id="gdrive" name="gdrive" type="gdrive" autocomplete="gdrive" required=""
+                                                placeholder="Your google drive link" x-model="state.gdrive"
+                                                class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                                        </div>
+                                        <span class="text-red-500 text-xs leading-relaxed">Google drive link for all required files</span>
                                     </div>
                                 </div>
                                 <div x-show="currentStep == 2">

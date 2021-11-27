@@ -25,6 +25,7 @@ class PPCStoreRequest extends FormRequest
     {
         return [
             'teamName' => ['required','string','max:255'],
+            'gdrive' => ['required','string','max:255'],
             'members' => ['required', 'array'],
             'members.*.name' => ['string', 'nullable', 'max:255'],
             'members.*.major' => ['string', 'nullable', 'max:255'],

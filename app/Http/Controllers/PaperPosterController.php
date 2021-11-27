@@ -39,6 +39,7 @@ class PaperPosterController extends Controller
         try {
             $paperPoster = PaperPoster::create([
                 'team_name' => $request->teamName,
+                'gdrive' => $request->gdrive,
                 'members' => $request->members,
             ]);
         } catch (\Exception $e) {

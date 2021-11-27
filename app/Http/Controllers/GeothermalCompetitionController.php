@@ -39,6 +39,7 @@ class GeothermalCompetitionController extends Controller
         try {
             $geothermal = GeothermalCompetition::create([
                 'team_name' => $request->teamName,
+                'gdrive' => $request->gdrive,
                 'members' => $request->members,
             ]);
         } catch (\Exception $e) {

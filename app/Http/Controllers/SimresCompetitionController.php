@@ -39,6 +39,7 @@ class SimresCompetitionController extends Controller
         try {
             $simres = SimresCompetition::create([
                 'team_name' => $request->teamName,
+                'gdrive' => $request->gdrive,
                 'members' => $request->members,
             ]);
         } catch (\Exception $e) {
