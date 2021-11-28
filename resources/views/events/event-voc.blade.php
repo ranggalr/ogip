@@ -93,7 +93,7 @@
           "> Register now </a>
                     </div>
                     <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
-                        <button class="
+                        <a href="{{ asset('Invitation Letter OGIP.pdf') }}" class="
             items-center
             block
             px-10
@@ -112,7 +112,7 @@
             focus:ring-2
             focus:ring-offset-2
             focus:ring-gray-500
-          "> Download inlet </button>
+          "> Download inlet </a>
                     </div>
                 </div>
             </div>
