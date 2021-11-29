@@ -327,7 +327,7 @@
                     class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter  text-gray-200 lg:text-3xl">
                     International Paper and Poster Competition </h1>
                 <div class="mt-4">
-                    <a href="#"
+                    <a href="{{ route('competition.paper-poster') }}"
                         class="inline-flex items-center mt-4 font-semibold text-gray-200  lg:mb-0 hover:text-neutral-600"
                         title="read more"> Read More » </a>
                 </div>

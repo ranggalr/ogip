@@ -4,6 +4,7 @@ use App\Http\Controllers\GeothermalCompetitionController;
 use App\Http\Controllers\ORDCompetitionController;
 use App\Http\Controllers\PaperPosterController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PetroleumInsightController;
 use App\Http\Controllers\PODCompetitionController;
 use App\Http\Controllers\SimresCompetitionController;
 use App\Http\Controllers\SmartCompetitionController;
@@ -36,6 +37,8 @@ Route::prefix('event')->name('event.')->group(function () {
     Route::view('/pascal', 'events.event-pascal')->name('pascal');
     Route::view('/ogip-cup', 'events.event-ogip_cup')->name('ogip-cup');
     Route::view('/petroleum-insight', 'events.event-pi')->name('petroleum-insight');
+    Route::view('/petroleum-insight/registration', 'registration.registration-pi')->name('petroleum-insight.registration');
+    Route::post('/petroleum-insight/registration', [PetroleumInsightController::class, 'store'])->name('petroleum-insight.registration');
     Route::view('/video-of-ogip', 'events.event-voc')->name('voc');
     Route::view('/video-of-ogip/registration', 'registration.registration-voc')->name('voc.registration');
     Route::post('/video-of-ogip/registration', [VOCController::class, 'store'])->name('voc.registration');
@@ -58,8 +61,8 @@ Route::prefix('competition')->name('competition.')->group(function () {
     Route::view('smart-competition/registration', 'registration.registration-smart')->name('smart-competition.registration');
     Route::post('smart-competition/registration', [SmartCompetitionController::class, 'store'])->name('smart-competition.registration');
     Route::view('reservoir-simulation', 'competitions.competition-reservoir')->name('reservoir-simulation');
-    Route::view('reservoir-simulation/registration', 'registration.registration-simres')->name('reservoir-simulation.register');
-    Route::post('reservoir-simulation/registration', [SimresCompetitionController::class, 'store'])->name('reservoir-simulation.register');
+    Route::view('reservoir-simulation/registration', 'registration.registration-simres')->name('reservoir-simulation.registration');
+    Route::post('reservoir-simulation/registration', [SimresCompetitionController::class, 'store'])->name('reservoir-simulation.registration');
 });
 
 // Route::get('/dashboard', function () {
