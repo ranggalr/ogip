@@ -69,7 +69,7 @@
           <p class="mb-8 text-base leading-relaxed text-left text-gray-300"> ESCALATE YOUR SKILLS TO MAKE A BREAKTHROUGH IN  THE  FUTURE OF  OIL AND GAS INDUSTRY </p>
           <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
             <div class="mt-3 rounded-lg sm:mt-0">
-              <a  class="
+              <a href="{{ route('event.petroleum-insight.registration') }}" class="
             items-center
             block
             px-10
