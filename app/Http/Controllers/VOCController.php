@@ -6,6 +6,7 @@ use App\Http\Requests\VOCStoreRequest;
 use App\Mail\VOCRegistered;
 use App\Models\VOC;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class VOCController extends Controller
@@ -38,10 +39,13 @@ class VOCController extends Controller
      */
     public function store(VOCStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             $voc = VOC::create($request->validated());
             Mail::to($request->email)->send(new VOCRegistered($voc));
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()

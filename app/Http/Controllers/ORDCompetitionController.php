@@ -6,6 +6,7 @@ use App\Http\Requests\ORDStoreRequest;
 use App\Mail\CompetitionRegistered;
 use App\Models\ORDCompetition;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class ORDCompetitionController extends Controller
@@ -38,6 +39,7 @@ class ORDCompetitionController extends Controller
      */
     public function store(ORDStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             $ord = ORDCompetition::create([
                 'team_name' => $request->teamName,
@@ -45,7 +47,9 @@ class ORDCompetitionController extends Controller
                 'members' => $request->members,
             ]);
             Mail::to($request->members[0]['email'])->send(new CompetitionRegistered);
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()

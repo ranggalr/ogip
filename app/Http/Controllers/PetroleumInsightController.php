@@ -6,6 +6,7 @@ use App\Http\Requests\PIStoreRequest;
 use App\Mail\PIRegistered;
 use App\Models\PetroleumInsight;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class PetroleumInsightController extends Controller
@@ -38,10 +39,13 @@ class PetroleumInsightController extends Controller
      */
     public function store(PIStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             $pi = PetroleumInsight::create($request->validated());
             Mail::to($request->email)->send(new PIRegistered($pi));
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()

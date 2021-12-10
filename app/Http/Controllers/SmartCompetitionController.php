@@ -6,6 +6,7 @@ use App\Http\Requests\SCStoreRequest;
 use App\Mail\CompetitionRegistered;
 use App\Models\SmartCompetition;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class SmartCompetitionController extends Controller
@@ -38,6 +39,7 @@ class SmartCompetitionController extends Controller
      */
     public function store(SCStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             $smartCompetition = SmartCompetition::create([
                 'team_name' => $request->teamName,
@@ -45,7 +47,9 @@ class SmartCompetitionController extends Controller
                 'members' => $request->members,
             ]);
             Mail::to($request->members[0]['email'])->send(new CompetitionRegistered);
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PaymentStoreRequest;
 use App\Models\Payment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PaymentController extends Controller
 {
@@ -36,6 +37,7 @@ class PaymentController extends Controller
      */
     public function store(PaymentStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             if($request->file('paymentProof')->isValid())
             {
@@ -45,6 +47,7 @@ class PaymentController extends Controller
                     'competition' => $request->competition,
                     'payment_proof' => $path
                 ]);
+                DB::commit();
             }
             else
             {
@@ -54,6 +57,7 @@ class PaymentController extends Controller
                 ]);
             }
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()

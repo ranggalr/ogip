@@ -22,7 +22,7 @@
                     <tr class="bg-white">
                         <td class="px-6 py-4 text-sm font-medium text-gray-900  whitespace-nowrap"> {{ $i->id }} </td>
                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"> {{ $i->team_name }} </td>
-                        <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"><a href="{{ route('admin.simres.view', ['pod' => $i->id]) }}" class="p-4 rounded-xl bg-ogip-2 text-gray-200">View</a></td>
+                        <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"><a href="{{ route('admin.simres.view', ['simres' => $i->id]) }}" class="p-4 rounded-xl bg-ogip-2 text-gray-200">View</a></td>
                     </tr>
                   @empty
                       Tidak ada data yang tersedia

@@ -6,6 +6,7 @@ use App\Http\Requests\PPCStoreRequest;
 use App\Mail\CompetitionRegistered;
 use App\Models\PaperPoster;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class PaperPosterController extends Controller
@@ -38,6 +39,7 @@ class PaperPosterController extends Controller
      */
     public function store(PPCStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             $paperPoster = PaperPoster::create([
                 'team_name' => $request->teamName,
@@ -45,7 +47,9 @@ class PaperPosterController extends Controller
                 'members' => $request->members,
             ]);
             Mail::to($request->members[0]['email'])->send(new CompetitionRegistered);
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()

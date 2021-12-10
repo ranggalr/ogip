@@ -6,6 +6,7 @@ use App\Http\Requests\SimresStoreRequest;
 use App\Mail\CompetitionRegistered;
 use App\Models\SimresCompetition;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class SimresCompetitionController extends Controller
@@ -38,6 +39,7 @@ class SimresCompetitionController extends Controller
      */
     public function store(SimresStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             $simres = SimresCompetition::create([
                 'team_name' => $request->teamName,
@@ -45,7 +47,9 @@ class SimresCompetitionController extends Controller
                 'members' => $request->members,
             ]);
             Mail::to($request->members[0]['email'])->send(new CompetitionRegistered);
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()

@@ -6,6 +6,7 @@ use App\Http\Requests\GeothermalStoreRequest;
 use App\Mail\CompetitionRegistered;
 use App\Models\GeothermalCompetition;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class GeothermalCompetitionController extends Controller
@@ -38,6 +39,7 @@ class GeothermalCompetitionController extends Controller
      */
     public function store(GeothermalStoreRequest $request)
     {
+        DB::beginTransaction();
         try {
             $geothermal = GeothermalCompetition::create([
                 'team_name' => $request->teamName,
@@ -45,7 +47,9 @@ class GeothermalCompetitionController extends Controller
                 'members' => $request->members,
             ]);
             Mail::to($request->members[0]['email'])->send(new CompetitionRegistered);
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollback();
             return response()->json([
                 'status' => 'error',
                 'msg' => $e->getMessage()
