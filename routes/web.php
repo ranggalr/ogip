@@ -1,5 +1,13 @@
 <?php
 
+use App\Http\Controllers\Admin\GeothermalCompetitionController as AdminGeothermalCompetitionController;
+use App\Http\Controllers\Admin\ORDCompetitionController as AdminORDCompetitionController;
+use App\Http\Controllers\Admin\PaperPosterController as AdminPaperPosterController;
+use App\Http\Controllers\Admin\PetroleumInsightController as AdminPetroleumInsightController;
+use App\Http\Controllers\Admin\PODCompetitionController as AdminPODCompetitionController;
+use App\Http\Controllers\Admin\SimresCompetitionController as AdminSimresCompetitionController;
+use App\Http\Controllers\Admin\SmartCompetitionController as AdminSmartCompetitionController;
+use App\Http\Controllers\Admin\VOCController as AdminVOCController;
 use App\Http\Controllers\GeothermalCompetitionController;
 use App\Http\Controllers\ORDCompetitionController;
 use App\Http\Controllers\PaperPosterController;
@@ -65,9 +73,29 @@ Route::prefix('competition')->name('competition.')->group(function () {
     Route::post('reservoir-simulation/registration', [SimresCompetitionController::class, 'store'])->name('reservoir-simulation.registration');
 });
 
+Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(function () {
+    Route::view('/','admin.dashboard')->name('dashboard');
+    Route::get('/smart-competition', [AdminSmartCompetitionController::class, 'index'])->name('smart-competition');
+    Route::get('/smart-competition/{smartCompetition}', [AdminSmartCompetitionController::class, 'show'])->name('smart-competition.view');
+    Route::get('oil-rig-design', [AdminORDCompetitionController::class, 'index'])->name('oil-rig-design');
+    Route::get('oil-rig-design/{ord}', [AdminORDCompetitionController::class, 'show'])->name('oil-rig-design.view');
+    Route::get('geothermal', [AdminGeothermalCompetitionController::class, 'index'])->name('geothermal');
+    Route::get('geothermal/{gcs}', [AdminGeothermalCompetitionController::class, 'show'])->name('geothermal.view');
+    Route::get('ppc', [AdminPaperPosterController::class, 'index'])->name('ppc');
+    Route::get('ppc/{ppc}', [AdminPaperPosterController::class, 'show'])->name('ppc.view');
+    Route::get('pod', [AdminPODCompetitionController::class, 'index'])->name('pod');
+    Route::get('pod/{pod}', [AdminPODCompetitionController::class, 'show'])->name('pod.view');
+    Route::get('simres', [AdminSimresCompetitionController::class, 'index'])->name('simres');
+    Route::get('simres/{simres}', [AdminSimresCompetitionController::class, 'show'])->name('simres.view');
+    Route::get('voc', [AdminVOCController::class, 'index'])->name('voc');
+    Route::get('voc/{voc}', [AdminVOCController::class, 'show'])->name('voc.view');
+    Route::get('pi', [AdminPetroleumInsightController::class, 'index'])->name('pi');
+    Route::get('pi/{pi}', [AdminPetroleumInsightController::class, 'show'])->name('pi.view');
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';
 
