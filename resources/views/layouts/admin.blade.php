@@ -297,6 +297,31 @@
                       </a>
                     </li>
                   </ul>
+                  <p class="px-4 pt-4 font-medium text-white uppercase">Others</p>
+                  <ul>
+                    <li>
+                        <a class="
+                    inline-flex
+                    items-center
+                    w-full
+                    px-4
+                    py-2
+                    mt-1
+                    text-base text-white
+                    transition
+                    duration-500
+                    ease-in-out
+                    transform
+                    border-indigo-800
+                    rounded-lg
+                    hover:border-indigo-800
+                    focus:shadow-outline
+                    hover:bg-indigo-600
+                  " white="" 70="" href="{{ route('admin.payment') }}">
+                        <span class="ml-4"> Payments</span>
+                      </a>
+                    </li>
+                  </ul>
                 </nav>
               </div>
               <div class="flex flex-shrink-0 p-4 px-4 bg-indigo-600">

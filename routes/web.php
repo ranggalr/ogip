@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\GeothermalCompetitionController as AdminGeothermalCompetitionController;
 use App\Http\Controllers\Admin\ORDCompetitionController as AdminORDCompetitionController;
 use App\Http\Controllers\Admin\PaperPosterController as AdminPaperPosterController;
+use App\Http\Controllers\Admin\PaymentController as AdminPaymentController;
 use App\Http\Controllers\Admin\PetroleumInsightController as AdminPetroleumInsightController;
 use App\Http\Controllers\Admin\PODCompetitionController as AdminPODCompetitionController;
 use App\Http\Controllers\Admin\SimresCompetitionController as AdminSimresCompetitionController;
@@ -91,6 +92,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(func
     Route::get('voc/{voc}', [AdminVOCController::class, 'show'])->name('voc.view');
     Route::get('pi', [AdminPetroleumInsightController::class, 'index'])->name('pi');
     Route::get('pi/{pi}', [AdminPetroleumInsightController::class, 'show'])->name('pi.view');
+    Route::get('payment', [AdminPaymentController::class, 'index'])->name('payment');
+    Route::get('payment/download/{payment}', [AdminPaymentController::class, 'download'])->name('payment.download');
 });
 
 // Route::get('/dashboard', function () {
