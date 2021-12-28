@@ -14,6 +14,7 @@
                   <tr>
                     <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "> ID </th>
                     <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "> Team Name </th>
+                    <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "> Created At </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -22,6 +23,7 @@
                     <tr class="bg-white">
                         <td class="px-6 py-4 text-sm font-medium text-gray-900  whitespace-nowrap"> {{ $i->id }} </td>
                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"> {{ $i->team_name }} </td>
+                        <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"> {{ $i->created_at }} </td>
                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"><a href="{{ route('admin.oil-rig-design.view', ['ord' => $i->id]) }}" class="p-4 rounded-xl bg-ogip-2 text-gray-200">View</a></td>
                     </tr>
                   @empty
