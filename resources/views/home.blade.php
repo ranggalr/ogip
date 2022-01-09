@@ -27,7 +27,7 @@
           text-base
           leading-relaxed
           text-white
-        "> It's coming next year, be prepare!
+        "> What are you waiting for? Sign up yourself now!
                     </p>
                     <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                         <div class="mt-3 rounded-lg sm:mt-0">
