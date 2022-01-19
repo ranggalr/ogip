@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CEOTalk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CEOTalkController extends Controller
 {
@@ -35,7 +36,7 @@ class CEOTalkController extends Controller
      */
     public function store(Request $request)
     {
-        DB\::beginTransaction();
+        DB::beginTransaction();
         try {
             $ceo = CEOTalk::create($request->validated());
             // Mail::to($request->email)->send(new PIRegistered($pi));

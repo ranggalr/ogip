@@ -69,7 +69,7 @@
           <p class="mb-8 text-base leading-relaxed text-left text-gray-300"> THE ADVANCED INTELLIGENT GROWTH FOR  THE  PROFICIENT GENERATIONS </p>
           <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
             <div class="mt-3 rounded-lg sm:mt-0">
-              <a href="{{ route('events.ceo-talk.registration') }}"  class="
+              <a href="{{ route('event.ceo-talk.registration') }}"  class="
             items-center
             block
             px-10
