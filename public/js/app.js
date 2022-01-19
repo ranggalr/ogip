@@ -4771,6 +4771,56 @@ window.pi_app = function () {
   };
 };
 
+window.ceo_app = function () {
+  return {
+    state: {
+      name: null,
+      email: null,
+      institution: null,
+      major: null,
+      phone: null
+    },
+    loadingState: false,
+    submitForm: function submitForm() {
+      this.loadingState = true;
+
+      if (!Object.values(this.state).includes(null)) {
+        axios.post(route('event.ceo-talk.registration'), this.state).then(function (resp) {
+          if (resp.data.status != 'error') {
+            swal.fire({
+              icon: 'success',
+              title: 'HOORAY!',
+              html: 'Your registration has been submitted, please check your email. Thank you!'
+            });
+          } else {
+            swal.fire({
+              icon: 'error',
+              title: 'Oops!',
+              html: resp.data.msg
+            });
+          }
+        })["catch"](function (e) {
+          swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            html: Object.values(e.response.data.errors).map(function (e) {
+              return '<li>' + e + '</li>';
+            }).join('')
+          });
+        });
+      } else {
+        swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          html: 'Please fill all the form correctly'
+        });
+      }
+
+      this.loadingState = false;
+    }
+  };
+};
+
 /***/ }),
 
 /***/ "./node_modules/lodash/lodash.js":

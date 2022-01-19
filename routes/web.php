@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PODCompetitionController as AdminPODCompetitionCo
 use App\Http\Controllers\Admin\SimresCompetitionController as AdminSimresCompetitionController;
 use App\Http\Controllers\Admin\SmartCompetitionController as AdminSmartCompetitionController;
 use App\Http\Controllers\Admin\VOCController as AdminVOCController;
+use App\Http\Controllers\CEOTalkController;
 use App\Http\Controllers\GeothermalCompetitionController;
 use App\Http\Controllers\ORDCompetitionController;
 use App\Http\Controllers\PaperPosterController;
@@ -40,6 +41,8 @@ Route::post('/payment', [PaymentController::class, 'store'])->name('payment.stor
 
 Route::prefix('event')->name('event.')->group(function () {
     Route::view('/ceo-talk', 'events.event-ceo')->name('ceo-talk');
+    Route::view('/ceo-talk/registration', 'registration.registration-ceo')->name('ceo-talk.registration');
+    Route::post('/ceo-talk/registration', [CEOTalkController::class, 'store'])->name('ceo-talk.registration');
     Route::view('/awarding-night', 'events.event-awarding')->name('awarding-night');
     Route::view('/grand-opening', 'events.event-opening')->name('grand-opening');
     Route::view('/virtual-company-visit', 'events.event-vcc')->name('vcc');
