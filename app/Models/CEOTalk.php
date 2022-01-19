@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CEOTalk extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name','email','institution','major','phone'];
+
 }
