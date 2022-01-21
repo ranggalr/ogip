@@ -11,4 +11,8 @@ Venue : Zoom meeting<br><br>
 
 Link for the zoom meeting, will be announced soon via email.<br><br>
 
+Please join our WhatsApp group through link down below!
+
+<a href="https://chat.whatsapp.com/JATn5iN5mIXBQnJ23rZSrI">https://chat.whatsapp.com/JATn5iN5mIXBQnJ23rZSrI</a>
+
 Thank you for your attention. We are looking forward for your participation!<br><br>

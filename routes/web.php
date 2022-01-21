@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CEOTalkController as AdminCEOTalkController;
 use App\Http\Controllers\Admin\GeothermalCompetitionController as AdminGeothermalCompetitionController;
 use App\Http\Controllers\Admin\ORDCompetitionController as AdminORDCompetitionController;
 use App\Http\Controllers\Admin\PaperPosterController as AdminPaperPosterController;
@@ -95,6 +96,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(func
     Route::get('voc/{voc}', [AdminVOCController::class, 'show'])->name('voc.view');
     Route::get('pi', [AdminPetroleumInsightController::class, 'index'])->name('pi');
     Route::get('pi/{pi}', [AdminPetroleumInsightController::class, 'show'])->name('pi.view');
+    Route::get('ceo-talk', [AdminCEOTalkController::class, 'index'])->name('ceo-talk');
+    Route::get('ceo-talk/{ceo}', [AdminCEOTalkController::class, 'show'])->name('ceo-talk.view');
     Route::get('payment', [AdminPaymentController::class, 'index'])->name('payment');
     Route::get('payment/download/{payment}', [AdminPaymentController::class, 'download'])->name('payment.download');
 });
