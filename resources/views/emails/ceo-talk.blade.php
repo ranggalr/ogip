@@ -9,10 +9,10 @@ Date : Saturday, January 29th, 2022<br>
 Time : 8.30 (GMT +7)  - finish<br>
 Venue : Zoom meeting<br><br>
 
-Link for the zoom meeting, will be announced soon via email.<br><br>
+Link for the zoom meeting, will be announced soon via whatsapp group!<br><br>
 
-Please join our WhatsApp group through link down below!
+Please join the whatsapp group through the link below for further information about the event! <br/><br/>
 
-<a href="https://chat.whatsapp.com/JATn5iN5mIXBQnJ23rZSrI">https://chat.whatsapp.com/JATn5iN5mIXBQnJ23rZSrI</a>
+<a href="https://chat.whatsapp.com/JATn5iN5mIXBQnJ23rZSrI">https://chat.whatsapp.com/JATn5iN5mIXBQnJ23rZSrI</a><br/><br/>
 
 Thank you for your attention. We are looking forward for your participation!<br><br>
