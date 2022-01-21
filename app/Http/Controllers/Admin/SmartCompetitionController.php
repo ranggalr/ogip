@@ -15,7 +15,7 @@ class SmartCompetitionController extends Controller
      */
     public function index()
     {
-        $smartCompetitions = SmartCompetition::paginate(15);
+        $smartCompetitions = SmartCompetition::get();
         return view('admin.smart', compact('smartCompetitions'));
     }
 
