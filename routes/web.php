@@ -19,6 +19,7 @@ use App\Http\Controllers\PetroleumInsightController;
 use App\Http\Controllers\PODCompetitionController;
 use App\Http\Controllers\SimresCompetitionController;
 use App\Http\Controllers\SmartCompetitionController;
+use App\Http\Controllers\VCCController;
 use App\Http\Controllers\VOCController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +48,8 @@ Route::prefix('event')->name('event.')->group(function () {
     Route::view('/awarding-night', 'events.event-awarding')->name('awarding-night');
     Route::view('/grand-opening', 'events.event-opening')->name('grand-opening');
     Route::view('/virtual-company-visit', 'events.event-vcc')->name('vcc');
+    Route::view('/virtual-company-visit/registration', 'registration.registration-vcc')->name('virtual-company-visit.registration');
+    Route::post('/virtual-company-visit/registration', [VCCController::class, 'store'])->name('virtual-company-visit.registration');
     Route::view('/pascal', 'events.event-pascal')->name('pascal');
     Route::view('/ogip-cup', 'events.event-ogip_cup')->name('ogip-cup');
     Route::view('/petroleum-insight', 'events.event-pi')->name('petroleum-insight');

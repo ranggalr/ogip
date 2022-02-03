@@ -69,7 +69,7 @@
           <p class="mb-8 text-base leading-relaxed text-left text-gray-300"> PREPARE OUR KNOWLEDGE TO THE  WORLD OF OIL AND GAS INDUSTRIES </p>
           <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
             <div class="mt-3 rounded-lg sm:mt-0">
-              <a  class="
+              <a href="{{ route('event.virtual-company-visit.registration') }}" class="
             items-center
             block
             px-10
