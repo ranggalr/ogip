@@ -18,6 +18,7 @@ use App\Http\Controllers\PaperPosterController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PetroleumInsightController;
 use App\Http\Controllers\PODCompetitionController;
+use App\Http\Controllers\PPCSubmissionController;
 use App\Http\Controllers\SimresCompetitionController;
 use App\Http\Controllers\SmartCompetitionController;
 use App\Http\Controllers\VCCController;
@@ -72,6 +73,8 @@ Route::prefix('competition')->name('competition.')->group(function () {
     Route::view('plan-of-development/registration', 'registration.registration-pod')->name('plan-of-development.registration');
     Route::post('plan-of-development/registration', [PODCompetitionController::class, 'store'])->name('plan-of-development.registration');
     Route::view('paper-poster', 'competitions.competition-ppc')->name('paper-poster');
+    Route::view('paper-poster/submission', 'ppc-submission')->name('paper-poster.submission');
+    Route::post('paper-poster/submission', [PPCSubmissionController::class, 'store'])->name('paper-poster.submission');
     Route::view('paper-poster/registration', 'registration.registration-ppc')->name('paper-poster.registration');
     Route::post('paper-poster/registration', [PaperPosterController::class, 'store'])->name('paper-poster.registration');
     Route::view('smart-competition', 'competitions.competition-smart')->name('smart-competition');

@@ -4871,6 +4871,69 @@ window.vcc_app = function () {
   };
 };
 
+window.ppc_submission_app = function () {
+  return {
+    loadingState: false,
+    state: {
+      teamName: null,
+      university: null,
+      fullPaper: null,
+      powerPoint: null,
+      poster: null
+    },
+    submitForm: function submitForm() {
+      console.log(this.state);
+
+      if (!Object.values(this.state).includes(null)) {
+        var formData = new FormData();
+        formData.append('teamName', this.state.teamName);
+        formData.append('university', this.state.university);
+        formData.append('fullPaper', this.state.fullPaper);
+        formData.append('powerPoint', this.state.powerPoint);
+        formData.append('poster', this.state.poster);
+        axios.post(route('competition.paper-poster.submission'), formData).then(function (resp) {
+          if (resp.data.status != 'error') {
+            swal.fire({
+              icon: 'success',
+              title: 'HOORAY!',
+              text: 'Your submission has been submitted, thank you!'
+            });
+          } else {
+            swal.fire({
+              icon: 'error',
+              title: 'Oops!',
+              text: resp.data.msg
+            });
+          }
+        })["catch"](function (e) {
+          swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            html: Object.values(e.response.data.errors).map(function (e) {
+              return '<li>' + e + '</li>';
+            }).join('')
+          });
+        });
+      } else {
+        swal.fire({
+          title: 'Oops!',
+          icon: 'error',
+          text: 'Please fill the form correctly'
+        });
+      }
+    },
+    handleFullPaper: function handleFullPaper() {
+      this.state.fullPaper = this.$refs.full_paper.files[0];
+    },
+    handlePowerPoint: function handlePowerPoint() {
+      this.state.powerPoint = this.$refs.powerpoint.files[0];
+    },
+    handlePoster: function handlePoster() {
+      this.state.poster = this.$refs.poster.files[0];
+    }
+  };
+};
+
 /***/ }),
 
 /***/ "./node_modules/lodash/lodash.js":
