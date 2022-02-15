@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PaperPosterController as AdminPaperPosterControll
 use App\Http\Controllers\Admin\PaymentController as AdminPaymentController;
 use App\Http\Controllers\Admin\PetroleumInsightController as AdminPetroleumInsightController;
 use App\Http\Controllers\Admin\PODCompetitionController as AdminPODCompetitionController;
+use App\Http\Controllers\Admin\PPCSubmissionController as AdminPPCSubmissionController;
 use App\Http\Controllers\Admin\SimresCompetitionController as AdminSimresCompetitionController;
 use App\Http\Controllers\Admin\SmartCompetitionController as AdminSmartCompetitionController;
 use App\Http\Controllers\Admin\VCCController as AdminVCCController;
@@ -94,6 +95,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(func
     Route::get('geothermal', [AdminGeothermalCompetitionController::class, 'index'])->name('geothermal');
     Route::get('geothermal/{gcs}', [AdminGeothermalCompetitionController::class, 'show'])->name('geothermal.view');
     Route::get('ppc', [AdminPaperPosterController::class, 'index'])->name('ppc');
+    Route::get('ppc/submission', [AdminPPCSubmissionController::class, 'index'])->name('ppc.submission');
+    Route::get('ppc/submission/download/{ppc}', [AdminPPCSubmissionController::class, 'download'])->name('ppc.submission.download');
     Route::get('ppc/{ppc}', [AdminPaperPosterController::class, 'show'])->name('ppc.view');
     Route::get('pod', [AdminPODCompetitionController::class, 'index'])->name('pod');
     Route::get('pod/{pod}', [AdminPODCompetitionController::class, 'show'])->name('pod.view');
