@@ -932,3 +932,72 @@ window.ppc_submission_app = function() {
         },
     }
 }
+
+
+window.pwf_app = function() {
+    return {
+        state: {
+            name: null,
+            email: null,
+            university: null,
+            major: null,
+            phone: null,
+            category: 'hands on',
+            paymentProof: null,
+        },
+        loadingState: false,
+        submitForm() {
+            console.log(this.state)
+            this.loadingState = true
+            if(!Object.values(this.state).includes(null))
+            {
+                let data = new FormData()
+                data.append('name', this.state.name)
+                data.append('email', this.state.email)
+                data.append('university', this.state.university)
+                data.append('major', this.state.major)
+                data.append('phone', this.state.phone)
+                data.append('category', this.state.category)
+                data.append('paymentProof', this.state.paymentProof)
+                axios.post(route('event.petroleum-insight.pwf'), data)
+                .then(resp => {
+                    if(resp.data.status != 'error')
+                    {
+                        swal.fire({
+                            icon: 'success',
+                            title: 'HOORAY!',
+                            html: 'Your registration has been submitted, please check your email. Thank you!'
+                        })
+                    }
+                    else
+                    {
+                        swal.fire({
+                            icon: 'error',
+                            title: 'Oops!',
+                            html: resp.data.msg
+                        })
+                    }
+                })
+                .catch(e => {
+                    swal.fire({
+                        icon: 'error',
+                        title: 'Error!',
+                        html: Object.values(e.response.data.errors).map(e => {return '<li>' + e + '</li>'}).join('')
+                    })
+                })
+            }
+            else
+            {
+                swal.fire({
+                    icon: 'error',
+                    title: 'Oops!',
+                    html: 'Please fill all the form correctly'
+                })
+            }
+            this.loadingState = false
+        },
+        handlePaymentProof() {
+            this.state.paymentProof = this.$refs.payment_proof.files[0];
+        },
+    }
+}

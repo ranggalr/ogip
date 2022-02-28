@@ -112,6 +112,28 @@
             focus:ring-gray-500
           "> Download inlet </a>
             </div>
+            <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
+              <a href="{{ route('event.petroleum-insight.pwf') }}" class="
+            items-center
+            block
+            px-10
+            py-3.5
+            text-base
+            font-medium
+            text-center text-gray-200
+            transition
+            duration-500
+            ease-in-out
+            transform
+            border-2 border-ogip-1
+            shadow-md
+            rounded-xl
+            focus:outline-none
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-gray-500
+          "> Petroleum Workshop Field </a>
+            </div>
           </div>
         </div>
       </div>

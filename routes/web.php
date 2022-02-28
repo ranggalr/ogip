@@ -20,6 +20,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PetroleumInsightController;
 use App\Http\Controllers\PODCompetitionController;
 use App\Http\Controllers\PPCSubmissionController;
+use App\Http\Controllers\PWFController;
 use App\Http\Controllers\SimresCompetitionController;
 use App\Http\Controllers\SmartCompetitionController;
 use App\Http\Controllers\VCCController;
@@ -57,7 +58,9 @@ Route::prefix('event')->name('event.')->group(function () {
     Route::view('/ogip-cup', 'events.event-ogip_cup')->name('ogip-cup');
     Route::view('/petroleum-insight', 'events.event-pi')->name('petroleum-insight');
     Route::view('/petroleum-insight/registration', 'registration.registration-pi')->name('petroleum-insight.registration');
+    Route::view('/petroleum-insight/pwf', 'registration.registration-pwf')->name('petroleum-insight.pwf');
     Route::post('/petroleum-insight/registration', [PetroleumInsightController::class, 'store'])->name('petroleum-insight.registration');
+    Route::post('/petroleum-insight/pwf', [PWFController::class, 'store'])->name('petroleum-insight.pwf');
     Route::view('/video-of-ogip', 'events.event-voc')->name('voc');
     Route::view('/video-of-ogip/registration', 'registration.registration-voc')->name('voc.registration');
     Route::post('/video-of-ogip/registration', [VOCController::class, 'store'])->name('voc.registration');
