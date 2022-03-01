@@ -26,7 +26,7 @@
         </div>
         <div class="p-6">
           <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl"> Institution</h1>
-          <p class="mx-auto text-base leading-relaxed text-gray-500"> {{ $pwf->institution }} </p>
+          <p class="mx-auto text-base leading-relaxed text-gray-500"> {{ $pwf->university }} </p>
         </div>
         <div class="p-6">
           <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl"> Major</h1>
