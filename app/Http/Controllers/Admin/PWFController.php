@@ -16,7 +16,7 @@ class PWFController extends Controller
      */
     public function index()
     {
-        $pi = PWF::get();
+        $pwf = PWF::get();
         return view('admin.pwf', compact('pwf'));
     }
 
