@@ -112,7 +112,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(func
     Route::get('pi/{pi}', [AdminPetroleumInsightController::class, 'show'])->name('pi.view');
     Route::get('pwf', [AdminPWFController::class, 'index'])->name('pwf');
     Route::get('pwf/{pwf}', [AdminPWFController::class, 'show'])->name('pwf.view');
-    Route::get('pwf/{pwf}/download', [AdminPWFController::class, 'show'])->name('pwf.download');
+    Route::get('pwf/{pwf}/download', [AdminPWFController::class, 'download'])->name('pwf.download');
     Route::get('ceo-talk', [AdminCEOTalkController::class, 'index'])->name('ceo-talk');
     Route::get('ceo-talk/{ceo}', [AdminCEOTalkController::class, 'show'])->name('ceo-talk.view');
     Route::get('vcc', [AdminVCCController::class, 'index'])->name('vcc');
