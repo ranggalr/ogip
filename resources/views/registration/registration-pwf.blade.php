@@ -1,4 +1,4 @@
-@extends('layouts.ogip-form', ['title' => 'VOC Registration'])
+@extends('layouts.ogip-form', ['title' => 'PWF Registration'])
 
 @section('body')
 <div x-data="pwf_app()">
@@ -210,6 +210,12 @@
                         focus:ring-offset-gray-300
                       ">
                         </div>
+                        <p class=" text-base text-italic text-neutral-600">
+                          The payment can be made via: <br /><br />
+
+                          BNI 0696068909<br />
+                          on behalf of Tasya Ria Finola<br />
+                        </p>
                       </div>
 
 

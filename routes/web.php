@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PaymentController as AdminPaymentController;
 use App\Http\Controllers\Admin\PetroleumInsightController as AdminPetroleumInsightController;
 use App\Http\Controllers\Admin\PODCompetitionController as AdminPODCompetitionController;
 use App\Http\Controllers\Admin\PPCSubmissionController as AdminPPCSubmissionController;
+use App\Http\Controllers\Admin\PWFController as AdminPWFController;
 use App\Http\Controllers\Admin\SimresCompetitionController as AdminSimresCompetitionController;
 use App\Http\Controllers\Admin\SmartCompetitionController as AdminSmartCompetitionController;
 use App\Http\Controllers\Admin\VCCController as AdminVCCController;
@@ -109,6 +110,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(func
     Route::get('voc/{voc}', [AdminVOCController::class, 'show'])->name('voc.view');
     Route::get('pi', [AdminPetroleumInsightController::class, 'index'])->name('pi');
     Route::get('pi/{pi}', [AdminPetroleumInsightController::class, 'show'])->name('pi.view');
+    Route::get('pwf', [AdminPWFController::class, 'index'])->name('pwf');
+    Route::get('pwf/{pwf}', [AdminPWFController::class, 'show'])->name('pwf.view');
+    Route::get('pwf/{pwf}/download', [AdminPWFController::class, 'show'])->name('pwf.download');
     Route::get('ceo-talk', [AdminCEOTalkController::class, 'index'])->name('ceo-talk');
     Route::get('ceo-talk/{ceo}', [AdminCEOTalkController::class, 'show'])->name('ceo-talk.view');
     Route::get('vcc', [AdminVCCController::class, 'index'])->name('vcc');
